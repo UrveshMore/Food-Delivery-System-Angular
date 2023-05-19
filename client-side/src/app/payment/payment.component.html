@@ -1,0 +1,199 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="fw-bold text-primary m-0"><a href="userhome"><i class="bi-shop" style="color: red;font-size:50px;"></i> swi<span class="text-secondary">gg</span>y</a></h1>
+            </a>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li> <a href="" class="nav-item nav-link active" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+                <li> <a href="" class="nav-item nav-link" routerLink="/userabout" routerLinkActive="active">About Us</a></li>
+                <li><a href="" class="nav-item nav-link" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+
+                <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li> -->
+                <li> <a href="" class="nav-item nav-link" routerLink="/usercontact" routerLinkActive="active">Contact Us</a></li>
+                <!-- <li> <a href="" class="nav-item nav-link" routerLink="login" routerLinkActive="active">login</a></li> -->
+                <!-- <li class="dropdown"><a href="#"><span>Logins</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#" routerLink="userlog" routerLinkActive="active">User Login</a></li>
+                        <li><a href="#" routerLink="adminLogin" routerLinkActive="active">Admin Login</a></li>
+                        <li><a href="#" routerLink="admin" routerLinkActive="active">Admin Login</a></li>
+                        <li><a href="#" routerLink="diliverylog" routerLinkActive="active">Delivery Login</a></li>
+                    </ul>
+                </li> -->
+                <!-- <li> <a href="" class="nav-item nav-link" routerLink="signup" routerLinkActive="active">signup</a></li> -->
+
+
+                <li><a href="" class="nav-item nav-link" routerLink="/cart" routerLinkActive="active" style="size: 250px;"><i class="bi-cart-check-fill" style="font-size: 30px;"></i></a></li>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+                <li><a href="" class="nav-item nav-link" routerLink="/userlog" routerLinkActive="active">Log Out</a></li>
+            </ul>
+            <!-- 
+                <button class="btn btn-primary">
+                    <i class="fas fa-cart-plus" style="font-size: 30px;"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">5</div>
+                </button> -->
+        </nav>
+        <!-- .navbar -->
+        <!-- <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i> -->
+    </div>
+</header>
+<!-- End Header -->
+<!-- <div class="min-h-screen flex justify-center items-center bg-blue-500">
+    <div class=" card rounded-lg h-auto w-3/4 bg-white">
+        <div class="flex h-full w-full ">
+            
+            <div class="left_side truncate relative rounded-l-lg h-auto w-full truncate">  -->
+<!-- <img class="h-full w-full" src="/assets/events-8.jpg">  -->
+<!-- <div class="h-48 w-72 opacity-70 rounded-lg  bg-blue-300 absolute top-28 left-8 ">
+                    <div class="p-2 mt-3 text-black font-semibold">
+                        <p >Card Number</p>
+                        <p class="border-b-2 text-white shown_number">0000 0000 0000 0000</p>
+                    </div>
+                    <div class="flex gap-3 mt-3">
+                        <div class="p-2 mt-2 text-black font-semibold">
+                            <p >Expiry Date</p>
+                            <p class="border-b-2 text-white shown_expiry">mm/yyyy</p>
+                        </div>
+                        <div class="p-2 mt-2 text-black font-semibold">
+                            <p >CVV</p>
+                            <p class="border-b-2 text-white shown_cvv">000</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                 
+            
+            <div class="p-3 right_side truncate h-auto w-full bg-gray-300 rounded-r-lg">
+                <p class="mt-3 text-xl font-semibold">Payment Details</p>
+                <div class="mt-5 relative"> <input class="input_number h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19" onkeyup="Number(this.value)"> <label class="text-xs absolute -top-4 left-0">Card Number</label> </div>
+                <div class="mt-7 w-full flex gap-3">
+                    <div class=" relative w-full"> 
+                    <input class="input_expiry h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" placeholder="mm/yyyy" data-slots="my" type="text" onkeyup="Expiry(this.value)"> <label class="text-xs absolute -top-4 left-0" >Expiry Date</label> </div>
+                    <div class=" relative w-full"> 
+                        <input class="input_cvv h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text"  placeholder="000" data-slots="0" data-accept="\d" size="3"  onkeyup="Cvv(this.value)"> <label class="text-xs absolute -top-4 left-0">CVV</label> </div>
+                </div>
+                <div class="mt-7 relative"> <input class="h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text"> <label class="text-xs absolute -top-4 left-0" onkeyup="Name(this.value)">Name on Card</label> </div>
+                <p class="mt-4">Amount due : <a class="font-semibold" href="#"><i class="fa fa-dollar"></i> {{itemAmount}}</a></p>
+                <div class="mb-5"> <button class="pay_now mt-4 outline-none rounded-lg text-white h-12 w-full bg-green-500 text-sm cursor-pointer transition-all hover:bg-green-800"><i class="fa fa-lock mr-1 "></i>Pay Now</button> </div>
+                <div class="mb-5"> <button class="pay_now mt-4 outline-none rounded-lg text-white h-12 w-full bg-green-500 text-sm cursor-pointer transition-all hover:bg-green-800"><i class="fa fa-lock mr-1 " routerLink="/usermenu" routerLinkActive="active"></i>Cancel</button> </div>
+            </div>
+        </div>
+    </div> 
+</div>
+ -->
+<!-- 
+<div class="container">
+    <div class="row">
+        <form>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </form>
+
+    </div>
+</div> -->
+<div class="bgimg">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="paya">
+                    <form #cash="ngForm" (ngSubmit)="pay(cash)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <div class="text-center">
+                                        <h3 class="tex">Payment Details</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Enter name</label><br>
+                                    <input type="text" name="accountholdername" placeholder="name" ngModel="accountholdername">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Enter Card number</label><br>
+                                    <input type="text" name="cardnumber" ngModel="cardnumber">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Enter CVV</label><br>
+                                    <input type="text" name="cvv" required maxlength="3" ngModel="cvv">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Enter expiry:</label><br>
+                                    <input type="month" name="date" ngModel="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Address</label><br>
+                                    <input type="text" name="address" placeholder="name" ngModel="address">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Enter Contact Number</label><br>
+                                    <input type="number" name="phonenumber" placeholder="name" ngModel="phonenumber">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p class="mt-4">Amount due : <a class="font-semibold" href=""><i class="fa fa-rupee"></i>{{itemAmount}}</a></p>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary" (click)="getreview()">
+      Process to Pay
+    </button>
+                            <br>
+                            <br>
+                            <button type="button" class="btn-primary" routerLink="/usermenu" routerLinkActive="active">
+       Go to Menu
+    </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>

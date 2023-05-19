@@ -1,0 +1,6 @@
+.bgimg {
+    background-image: url('assets/contactbg2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

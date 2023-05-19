@@ -1,0 +1,137 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="fw-bold text-primary m-0"><a href="userhome"><i class="bi-shop" style="color: red;font-size:50px;"></i> swi<span class="text-secondary">gg</span>y</a></h1>
+            </a>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li> <a href="" class="nav-item nav-link active" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+                <li> <a href="" class="nav-item nav-link" routerLink="/userabout" routerLinkActive="active">About Us</a></li>
+                <li><a href="" class="nav-item nav-link" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+
+                <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li> -->
+                <li> <a href="" class="nav-item nav-link" routerLink="/usercontact" routerLinkActive="active">Contact Us</a></li>
+                <!-- <li> <a href="" class="nav-item nav-link" routerLink="login" routerLinkActive="active">login</a></li> -->
+                <!-- <li class="dropdown"><a href="#"><span>Logins</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#" routerLink="userlog" routerLinkActive="active">User Login</a></li>
+                        <li><a href="#" routerLink="adminLogin" routerLinkActive="active">Admin Login</a></li>
+                        <li><a href="#" routerLink="admin" routerLinkActive="active">Admin Login</a></li>
+                        <li><a href="#" routerLink="diliverylog" routerLinkActive="active">Delivery Login</a></li>
+                    </ul>
+                </li> -->
+                <!-- <li> <a href="" class="nav-item nav-link" routerLink="signup" routerLinkActive="active">signup</a></li> -->
+
+
+                <li><a href="" class="nav-item nav-link" routerLink="/cart" routerLinkActive="active" style="size: 250px;"><i class="bi-cart-check-fill" style="font-size: 30px;"></i></a></li>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+                <li><a href="" class="nav-item nav-link" routerLink="/userlog" routerLinkActive="active">Log Out</a></li>
+            </ul>
+            <!-- 
+                <button class="btn btn-primary">
+                    <i class="fas fa-cart-plus" style="font-size: 30px;"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">5</div>
+                </button> -->
+        </nav>
+        <!-- .navbar -->
+        <!-- <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i> -->
+    </div>
+</header>
+<!-- End Header -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<ng-container *ngIf="products.length!=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>SI.No</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <th style="width: 12%">{{item.price}}</th>
+                            <td style="width:12%">{{item.quantity}}</td>
+                            <td style="width:12%">{{item.total}}</td>
+                            <td>
+                                <button class="btn btn-Dark" (click)="removeItem(item)"><i class="fas fa-trash-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="1"></td>
+                            <td><button (click)="emptyCart()" class="btn btn-Dark">Empty Cart</button></td>
+                            <td><button class="btn btn-warning" routerLink="/usermenu">Shop More</button></td>
+
+                            <td><button (click)="payment()" routerLink="/payment" routerLinkActive="active" class="btn btn-warning">Checkout</button></td>
+                            <td><strong>Total :{{grandTotal}}</strong></td>
+                        </tr>
+                        <!-- <button class="btn btn-danger" (click)="emptyCart(item)">Empty cart</button> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</ng-container>
+
+
+
+
+
+
+
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-tiltle">My cart</h5>
+        </div>
+        <div class="center">
+            <img src="/assets/cart3.jpg" alt="">
+            <h4>Your cart is empty</h4>
+            <h6>Add item to it now</h6>
+            <button class="btn btn-primary" routerLink="/fruits-and-vegetables">shop</button>
+
+        </div>
+    </div>
+</ng-container>

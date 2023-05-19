@@ -1,0 +1,64 @@
+<div class="bgimg">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="text-center log">User Login</div>
+    <br>
+    <div class="login">
+        <form #loginfrom="ngForm" (ngSubmit)="loginUser()">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" [(ngModel)]="user.email" name="email" id="email" class="form-control" #email="ngModel" />
+                <label class="form-label" for="form2Example1">Email address</label>
+                <div *ngIf="email.invalid && email.touched"><small class="text-muted">Enter correct email</small></div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input required minlength="4" type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control" #password="ngModel" />
+                <div *ngIf="password.touched && password.invalid"><small class="text-danger">Passowrd should not be blank</small></div>
+                <label class="form-label" for="form2Example2">Password</label>
+
+            </div>
+            <div class="text-center">
+                <!-- <div class="btn1">
+                    <p class="logi"> <button (click)="goTohome('/home')" class="btn btn-primary btn-block mb-4 ">
+                     <span class="go">Login</span>
+                  </button></p>
+                </div> -->
+                <button class="w-100 btn btn-lg btn-primary" type="submit"><span>Login</span></button>
+            </div>
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <!-- <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked /> -->
+                        <!-- <label class="form-check-label" for="form2Example31"> Remember me </label> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="sign">
+
+                <!-- <button (click)="goToPage('signup')" class="btn btn-primary btn-block mb-4 ">
+                <span class="text-center">Sign In</span>
+             </button> -->
+
+
+            </div>
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Singup Here
+                    <button (click)="goToPage('signup')" class="btn btn-primary btn-block mb-4 ">
+                    <span>signup</span>
+                 </button>
+                </p>
+
+            </div>
+        </form>
+    </div>
+</div>

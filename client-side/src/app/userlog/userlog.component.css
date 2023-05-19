@@ -1,0 +1,45 @@
+.login {
+    border: solid rgb(0, 0, 0) 0px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.sign {
+    margin-left: 190px;
+}
+
+.log {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 255, 0.578);
+}
+
+.bgimg {
+    background-image: url('/assets/slider4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login {
+    border: solid rgb(0, 0, 0) 0px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.sign {
+    margin-left: 190px;
+}
+
+.log {
+    font-weight: bold;
+    font-size: 50px;
+    color: rgba(0, 94, 255, 0.578);
+}
+
+.bgimg {
+    background-image: url('/assets/pexels-miguel-á-padriñán-2882566.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
